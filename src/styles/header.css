@@ -1,0 +1,21 @@
+.header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: var(--header-height);
+  min-height: var(--header-height);
+  width: 100%;
+  margin-bottom: 1rem;
+  position:fixed;
+  z-index: 2000;
+  background-color: hsl(240deg 10% 3.9% / .6);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid hsl(240deg 3.7% 15.9 / .4);
+}
+
+.header-container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}

@@ -1,0 +1,103 @@
+.table-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--space-4);
+  font-size: var(--text-sm);
+  padding: 0 var(--space-2);
+}
+
+.control-row {
+  position: relative;
+  width: 100%;
+  justify-content: space-between;
+  padding-right: 2rem;
+}
+
+.control-row,
+.pagination {
+  font-size: .85rem;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.pagination {
+  justify-content: flex-end;
+}
+
+.tf-select-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: .75rem;
+  padding: 0 1rem;
+  position: relative;
+}
+
+.page-info-selected {
+  position: relative;
+}
+
+.page-info-selected::after {
+  content: attr(data-text-after);
+}
+
+.page-info,
+.page-info-selected {
+  color: var(--grey4);
+}
+
+.page-info-wrapper {
+  width: 140px;
+  text-align: center;
+}
+
+.page-controls {
+  display: flex;
+  gap: var(--space-2);
+}
+
+/*
+How do I apply an explicit height and weight to an <img> tag
+*/
+.page-controls[disabled] button,
+.page-controls button[disabled] {
+  pointer-events: none;
+  user-select: none;
+  opacity: .3;
+}
+
+.page-controls button {
+  background-color: var(--black1);
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: var(--grey1);
+  transition: none !important;
+}
+
+@media screen and (max-width: 840px) {
+  .page-info-selected::after {
+    content: '';
+  }
+
+  .page-rows {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .page-controls button:first-child,
+  .page-controls button:last-child {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .page-info-wrapper {
+    display: none;
+  }
+}
