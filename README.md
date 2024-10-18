@@ -1,22 +1,38 @@
-### local task-manager (work in progress)
 
-#### how to run dev and prod server
+### Local task-manager (work in progress)
+<!-- image -->
+![task-manager](./screenshots/sctssk1.jpg)
 
-1. turn on json-server with one of the following commands (prod commpresses db.json)
-**make sure db.json is in root directory.**
+<!-- image2 -->
+![task-manager](./screenshots/sctssk2.jpg)
 
+---
+
+### Running
+
+initialize -- in root dir
+```bash
+npm install
+npm i -g json-server
+```
+
+**ensure db.json is in root directory**
+Open two terminals:
+
+#### Terminal 1.
 ```bash
 npm run server:dev
-```
-```bash
+# or use production server (compressed json ect.)
 npm run server:prod
 ```
----
-2. in another terminal, either build the code and run /dist through custom 'build:server' or run dev server
 
+#### Terminal 2.
+**If developing**
 ```bash
 npm run dev
 ```
+
+**If building**
 ```bash
 npm run build
 npm run build:server
